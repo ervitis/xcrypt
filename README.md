@@ -13,10 +13,8 @@ AES provides 128 bit, 192 bit and 256 bit of secret key size for encryption. Thi
 Let's see an example:
 
 ```go
-import("github.com:XbyOrange/xcrypt.git")
+import("github.com/XbyOrange/xcrypt")
 ```
-
-go run example.go xcypher.go
 
 ## Functions
 
@@ -27,7 +25,7 @@ CBC mode is highly recommended and it requires IV to make each message unique
 
 ```go
 key := []byte("I'm a key")
-ciphertext,err := EncryptCBC(key, "Plain text")
+ciphertext,err := xcrypt.EncryptCBC(key, "Plain text")
 if err != nil{
 	fmt.Println(err)
 }
@@ -42,7 +40,7 @@ fmt.Printf("%s\n", ciphertext)
 
 ```go
 key := []byte("I'm a key")
-result, err := DecryptCBC(key, ciphertext)
+result, err := xcrypt.DecryptCBC(key, ciphertext)
 if err != nil {
 	fmt.Println(err)
 }
@@ -54,13 +52,13 @@ fmt.Printf("%s\n", result)
 ### With `dep`
 
 ```bash
-dep ensure -add github.com:XbyOrange/xcrypt.git
+dep ensure -add github.com/XbyOrange/xcrypt
 ```
 
 ### With `go get`
 
 ```bash
-go get github.com:XbyOrange/xcrypt.git
+go get github.com/XbyOrange/xcrypt
 ```
 
 
