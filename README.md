@@ -63,6 +63,8 @@ dep ensure -add github.com/XbyOrange/xcrypt
 go get github.com/XbyOrange/xcrypt
 ```
 
-
 Just that! You can import it in your fantastic Go program!
 
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
