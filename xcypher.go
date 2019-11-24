@@ -62,10 +62,10 @@ func DecryptCBC(key []byte, encryptedText string) (string, error) {
 	mode := cipher.NewCBCDecrypter(block, iv)
 	mode.CryptBlocks(cipherText, cipherText)
 
-	padder := padder{
+	pad := padder{
 		blockSize: aes.BlockSize,
 	}
-	cipherText, _ = padder.unpad(cipherText)
+	cipherText, _ = pad.unpad(cipherText)
 	return fmt.Sprintf("%s", cipherText), nil
 }
 
